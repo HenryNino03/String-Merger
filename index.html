@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="is-preload">
+    <div class="container">
+      <div class="header">
+        <h1>String Merger</h1>
+      </div>
+      <div id="s-form">
+            <form id="form" class="form">
+              <div class="fields">
+                <div class="form-control">
+                  <label for="list1">String 1</label>
+                  <input type="text" id="first-input" placeholder="Write First String" required/>
+                </div>
+                <div class="form-control">
+                  <label for="list2">String 2</label>
+                  <input type="text" id="second-input" placeholder="Write Second String" required/>
+                </div>
+              </div>
+              <div>
+                <ul class="actions">
+                  <li><button type="submit" id="submit">Merge!</button></li>
+                <li><input type="reset" value="Reset"/></li>
+                </ul>
+              </div>
+             </form>
+            </div>
+      </div>
+      <script>const form = document.getElementById("form");
+        const firstInput =document.getElementById('first-input');
+        const secondInput = document.getElementById('second-input');
+        
+        form.addEventListener('submit', (e) =>{
+          e.preventDefault(); //prevent the form from autosubmitting
+          var x = firstInput.value;
+          var y = secondInput.value;
+          console.log(x);
+          var s, t;
+        function merge(x, y) {
+            var i, j, result;
+            i = j = 0;
+            result = "";
+            while (((i < x.length) && (j < y.length))) {
+                result += (x[i] + y[j]);
+                i += 1;
+                j += 1;
+            }
+            while ((i < x.length)) {
+                result += x[i];
+                i += 1;
+            }
+            while ((j < y.length)) {
+                result += y[j];
+                j += 1;
+            }
+            return result;
+        }
+        console.log(merge(x, y));
+        window.alert("Merged String Is:"+merge(x,y))
+        });
+        </script>
+        <style>
+            * {
+                box-sizing:border-box;
+              }
+              body{
+                background-color:grey;
+                display:flex;
+                align-items: center;
+                justify-content:center;
+                min-height:100vh;
+                margin: 0;
+              }
+              .container{
+                background-color:silver;
+                border-radius:5px;
+                box-shadow:0 2px 5px rgba(0,0,0,0.3);
+                overflow:400px;
+                width: 400px;
+            }
+              .header{
+                background-color:rgba(80,80,80);
+                border-bottom:1px solid;
+                padding:20px 40px;   
+              }
+              .header h1{
+                margin:0;
+              }
+              .form{
+                padding:30px 40px;
+              }
+              .form-control{
+                margin-bottom: 10px;
+                padding-bottom: 20px;
+                position: relative;
+              }
+              .form-control label{
+                display: inline-block;
+                margin-bottom: 5px;
+              }
+              .form-control input{
+                border: 2px solid #f0f0f0;
+                border-radius: 4px;
+                display: block;
+                font-family: inherit;
+                font-size: 14px;
+                padding: 10px;
+                width: 100%;
+              }
+              .form-control small{
+                visibility:hidden;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+              }
+              .form-control.error small{
+                visibility:visible;
+              }
+              
+        </style>
+  </body>
+</html>
