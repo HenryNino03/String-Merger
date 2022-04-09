@@ -32,7 +32,8 @@
              </form>
             </div>
       </div>
-      <script>const form = document.getElementById("form");
+      <script>
+        const form = document.getElementById("form");
         const firstInput =document.getElementById('first-input');
         const secondInput = document.getElementById('second-input');
         
@@ -40,21 +41,23 @@
           e.preventDefault(); //prevent the form from autosubmitting
           var x = firstInput.value;
           var y = secondInput.value;
-          console.log(x);
-          var s, t;
+        
         function merge(x, y) {
             var i, j, result;
             i = j = 0;
             result = "";
+          //while i and j still short than length to add the position to result
             while (((i < x.length) && (j < y.length))) {
                 result += (x[i] + y[j]);
                 i += 1;
                 j += 1;
             }
+          //when j is short than y.lenght do this
             while ((i < x.length)) {
                 result += x[i];
                 i += 1;
             }
+          //when i is short than x.lenght do this
             while ((j < y.length)) {
                 result += y[j];
                 j += 1;
@@ -62,8 +65,10 @@
             return result;
         }
         console.log(merge(x, y));
-        window.alert("Merged String Is:"+merge(x,y))
+        window.alert("Merged String Is: "+merge(x,y))
         });
+        
+        
         </script>
         <style>
             * {
