@@ -7,31 +7,31 @@
     <title>Document</title>
 </head>
 <body class="is-preload">
-    <div class="container">
-      <div class="header">
-        <h1>String Merger</h1>
-      </div>
-      <div id="s-form">
-            <form id="form" class="form">
-              <div class="fields">
-                <div class="form-control">
-                  <label for="list1">String 1</label>
-                  <input type="text" id="first-input" placeholder="Write First String" required/>
-                </div>
-                <div class="form-control">
-                  <label for="list2">String 2</label>
-                  <input type="text" id="second-input" placeholder="Write Second String" required/>
-                </div>
+  <div class="container">
+    <div class="header">
+      <h1>String Merger</h1>
+    </div>
+    <div id="s-form" class="s-form">
+          <form id="form" class="form">
+            <div class="fields">
+              <div class="form-control">
+                <label for="list1">String 1</label>
+                <input type="text" id="first-input" placeholder="Write First String" required/>
               </div>
-              <div>
-                <ul class="actions">
-                  <li><button type="submit" id="submit">Merge!</button></li>
-                <li><input type="reset" value="Reset"/></li>
-                </ul>
+              <div class="form-control">
+                <label for="list2">String 2</label>
+                <input type="text" id="second-input" placeholder="Write Second String" required/>
               </div>
-             </form>
             </div>
-      </div>
+            <div>
+              <ul class="actions">
+                <li><button class ="submit" type="submit" id="submit">Submit</button></li>
+                <li><button class ="reset" id="reset" type="reset" value="Reset"/>Reset</button></li>
+              </ul>
+            </div>
+           </form>
+          </div>
+    </div>
       <script>
         const form = document.getElementById("form");
         const firstInput =document.getElementById('first-input');
@@ -71,62 +71,102 @@
         
         </script>
         <style>
-            * {
-                box-sizing:border-box;
-              }
-              body{
-                background-color:grey;
-                display:flex;
-                align-items: center;
-                justify-content:center;
-                min-height:100vh;
-                margin: 0;
-              }
-              .container{
-                background-color:silver;
-                border-radius:5px;
-                box-shadow:0 2px 5px rgba(0,0,0,0.3);
-                overflow:400px;
-                width: 400px;
-            }
-              .header{
-                background-color:rgba(80,80,80);
-                border-bottom:1px solid;
-                padding:20px 40px;   
-              }
-              .header h1{
-                margin:0;
-              }
-              .form{
-                padding:30px 40px;
-              }
-              .form-control{
-                margin-bottom: 10px;
-                padding-bottom: 20px;
-                position: relative;
-              }
-              .form-control label{
-                display: inline-block;
-                margin-bottom: 5px;
-              }
-              .form-control input{
-                border: 2px solid #f0f0f0;
-                border-radius: 4px;
-                display: block;
-                font-family: inherit;
-                font-size: 14px;
-                padding: 10px;
-                width: 100%;
-              }
-              .form-control small{
-                visibility:hidden;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-              }
-              .form-control.error small{
-                visibility:visible;
-              }
+          * {
+            box-sizing:border-box;
+          }
+          body{
+            background-color:rgb(255,255,245);
+            display:flex;
+            align-items: center;
+            justify-content:center;
+            min-height:100vh;
+            margin: 0;
+          }
+          .container{
+            background-color:rgba(255,255,234);
+            border-radius:15px;
+            box-shadow:0 2px 5px rgba(0,0,0,0.3);
+            overflow:400px;
+            width: 400px;
+            max-width: 100%;
+            
+          }
+          
+          .header{
+            background-color:rgba(87,35,100);
+            border-bottom:1px solid;
+            padding:20px 40px;
+            border-radius: 10px;
+          
+          }
+          .header h1{
+            color:rgba(200,200,200);
+            margin:0;
+            position:relative;
+            left:70px;
+            top:0px;
+          }
+          .form{
+            padding:30px 40px;
+            border-radius: 10px;
+          
+          }
+          .form-control{
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+            position: relative;
+          }
+          .form-control label{
+            display: inline-block;
+            margin-bottom: 5px;
+          }
+          .form-control input{
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            font-family: inherit;
+            font-size: 14px;
+            padding: 10px;
+            width: 100%;
+          }
+          .form button.submit {
+            background-color:green;
+            color:black;
+            position:relative; 
+            left:10px; 
+            top:2px;
+            background-color:silver;
+            transition-duration: 0.4s;
+            padding:20px 25px;
+          }
+          .form button.submit:hover {
+            background-color: green; /* Green */
+            color: silver;
+          }
+          .form button.reset {
+            background-color:silver;
+            color:black;
+            position:relative; 
+            left:140px; 
+            top:-58px;
+            background-color:silver;
+            transition-duration: 0.4s;
+            padding:20px 28px;
+            
+          }
+          .form button.reset:hover {
+            background-color: red; /* Green */
+            color: silver;
+          }
+          .form li{
+            display:block;
+          }
+         
+          .actions{
+            margin-bottom:-40px;
+          }
+          
+          
               
         </style>
   </body>
